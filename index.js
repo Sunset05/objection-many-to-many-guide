@@ -8,6 +8,12 @@ const database = knex(databaseConfig);
 
 app.use(cors());
 
+app.get("/students", (request, response) => {
+    const students = [{ id: 1 }]
+
+    response.json({students})
+})
+
 app.get("/", (request, response) => {
     response.json({ message: "You're in flavor country!" })
 })
